@@ -13,8 +13,11 @@
   <analytics>false</analytics>
   <guid>${guid}</guid>
   <property name="ti.ui.defaultunit" type="string">dp</property>
+  <property name="run-on-main-thread" type="bool">true</property>
   <ios>
+    <use-jscore-framework>true</use-jscore-framework>
     <enable-launch-screen-storyboard>true</enable-launch-screen-storyboard>
+    <use-app-thinning>true</use-app-thinning>
     <plist>
       <dict>
         <key>UISupportedInterfaceOrientations~iphone</key>
@@ -31,6 +34,36 @@
           <string>UIInterfaceOrientationLandscapeLeft</string>
           <string>UIInterfaceOrientationLandscapeRight</string>
         </array>
+        <key>NSCameraUsageDescription</key>
+        <string>Can we use your camera?</string>
+        <key>NSPhotoLibraryUsageDescription</key>
+        <string>Can we save to your library?</string>
+        <key>NSMicrophoneUsageDescription</key>
+        <string>Can we use your microphone?</string>
+        <key>NSAppleMusicUsageDescription</key>
+        <string>Can we use your music library?</string>
+        <key>ITSAppUsesNonExemptEncryption</key>
+        <false/>
+        <key>UIRequiresPersistentWiFi</key>
+        <false/>
+        <key>UIPrerenderedIcon</key>
+        <false/>
+        <key>UIStatusBarHidden</key>
+        <false/>
+        <key>UIStatusBarStyle</key>
+        <string>UIStatusBarStyleDefault</string>
+        <key>LSApplicationQueriesSchemes</key>
+        <array>
+          <string>fb</string>
+          <string>fbapi</string>
+          <string>fbauth2</string>
+          <string>fbshareextension</string>
+          <string>fb-messenger-api</string>
+          <string>twitter</string>
+          <string>instagram</string>
+          <string>comgooglemaps</string>
+          <string>${id}</string>
+        </array>
         <key>CFBundleURLTypes</key>
         <array>
           <dict>
@@ -46,26 +79,6 @@
             </array>
           </dict>
         </array>
-        <key>LSApplicationQueriesSchemes</key>
-        <array>
-          <string>fb</string>
-          <string>fbapi</string>
-          <string>fbauth2</string>
-          <string>fbshareextension</string>
-          <string>fb-messenger-api</string>
-          <string>twitter</string>
-          <string>instagram</string>
-          <string>comgooglemaps</string>
-          <string>${id}</string>
-        </array>
-        <key>UIRequiresPersistentWiFi</key>
-        <false/>
-        <key>UIPrerenderedIcon</key>
-        <false/>
-        <key>UIStatusBarHidden</key>
-        <false/>
-        <key>UIStatusBarStyle</key>
-        <string>UIStatusBarStyleDefault</string>
       </dict>
     </plist>
   </ios>
@@ -80,7 +93,7 @@
     <theme>default</theme>
   </mobileweb>
   <modules>
-    <module platform="commonjs">ti.cloud</module>
+    <!--<module>hyperloop</module>-->
   </modules>
   <deployment-targets>
     <target device="android">true</target>
@@ -89,8 +102,9 @@
     <target device="mobileweb">true</target>
     <target device="windows">true</target>
   </deployment-targets>
-  <sdk-version>5.4.0.GA</sdk-version>
+  <sdk-version>6.0.0.GA</sdk-version>
   <plugins>
     <plugin version="1.0">ti.alloy</plugin>
+    <!--<plugin>hyperloop</plugin>-->
   </plugins>
 </ti:app>
