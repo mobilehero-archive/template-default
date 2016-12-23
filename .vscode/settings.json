@@ -3,9 +3,20 @@
 	//-------- Editor configuration --------
 
 	// Configure file associations to languages (e.g. "*.extension": "html"). These have precedence over the default associations of the languages installed.
-	"files.associations": { 
-		"*.tss": "javascript"
+	"files.associations": {
+		"*.tss": "javascript",
+		"*.jmk": "javascript"
 	},
+
+	// The number of spaces a tab is equal to.
+	"editor.tabSize": 4,
+
+	// Insert spaces when pressing Tab.
+	"editor.insertSpaces": false,
+
+	// When opening a file, `editor.tabSize` and `editor.insertSpaces` will be detected based on the file contents.
+	"editor.detectIndentation": false,
+
 
 	//-------- Files configuration --------
 
@@ -47,5 +58,5 @@
 		"jshintrc",
 		"tss"
 	]
-	
+
 }
