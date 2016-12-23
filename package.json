@@ -1,6 +1,6 @@
 {
   "name": "@nativeloop/template-default",
-  "version": "0.0.2",
+  "version": "0.0.3-beta.0",
   "description": "Default template for {nativeloop} mobile apps",
   "author": {
     "name": "Brenton House",
